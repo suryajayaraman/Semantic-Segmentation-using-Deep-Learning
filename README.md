@@ -12,6 +12,7 @@ Repo containing content for thinkautonomous image segmentation course
 - [neptune ai blog post](https://neptune.ai/blog/image-segmentation)
 - [Tips for Segmentation and object detection](https://neptune.ai/blog/data-exploration-for-image-segmentation-and-object-detection)
 - [Kaggle tips and tricks](https://neptune.ai/blog/image-segmentation-tips-and-tricks-from-kaggle-competitions)
+- [Github post Awesome semantic segmentation](https://github.com/mrgloom/awesome-semantic-segmentation)
 
 
 ### Code implementations
