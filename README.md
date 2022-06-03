@@ -5,6 +5,7 @@ Repo containing content for thinkautonomous image segmentation course
 ### Research papers
 - [Image Segmentation Using Deep Learning: A Survey](https://arxiv.org/abs/2001.05566)
 - [Comparison of Semantic Segmentation for Remote sensing](https://arxiv.org/abs/1905.10231)
+- [PAN paper](https://arxiv.org/pdf/1906.04378.pdf)
 
 
 ### Blog posts
@@ -13,16 +14,27 @@ Repo containing content for thinkautonomous image segmentation course
 - [Tips for Segmentation and object detection](https://neptune.ai/blog/data-exploration-for-image-segmentation-and-object-detection)
 - [Kaggle tips and tricks](https://neptune.ai/blog/image-segmentation-tips-and-tricks-from-kaggle-competitions)
 - [Github post Awesome semantic segmentation](https://github.com/mrgloom/awesome-semantic-segmentation)
+- [CVPR 2022 papers summary](https://github.com/Jeremy26/CVPR-2022-Papers-EN/blob/main/README.md#2)
+- [PAN blog ppst](https://medium.com/mlearning-ai/review-pan-pyramid-attention-network-for-semantic-segmentation-semantic-segmentation-8d94101ba24a)
 
 
 ### Code implementations
+- ***[pytorch segmentation library](https://github.com/yassouali/pytorch-segmentation)***
+- ***[segmentation models pytorch](https://github.com/qubvel/segmentation_models.pytorch)***
+
 - [Real time Sem Seg paperswithcode](https://paperswithcode.com/task/real-time-semantic-segmentation)
 - [deeplabv3 impl](https://github.com/fregu856/deeplabv3)
 - [deeplabv3+ pytorch](https://github.com/VainF/DeepLabV3Plus-Pytorch)
 - [deeplabv3 r101](https://www.kaggle.com/mobassir/deeplabv3-resnet101-for-severstal-sdd)
-- [pytorch segmentation library](https://github.com/yassouali/pytorch-segmentation)
 - [HRNet official implementation](https://github.com/HRNet/HRNet-Semantic-Segmentation)
 - [HRNet Kaggle SemSeg post](https://www.kaggle.com/bibek777/try-hrnet-semantic-segmentation)
+
+
+
+### Transformer architectures for segmentation
+- [segmenter github](https://github.com/rstrudel/segmenter)
+- [UTNet](https://github.com/yhygao/UTNet)
+- [transUTNet](https://github.com/mkara44/transunet_pytorch)
 
 
 ### Semantic segmentation metrics
