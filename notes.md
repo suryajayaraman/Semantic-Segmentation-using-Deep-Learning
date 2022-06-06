@@ -78,6 +78,13 @@
 - ### Focal Loss
     - 
 
+## Upsampling techniques
+- Nearest neighbour upsampling
+- bilinear interpolation
+- bed of nails approach
+- max unpooling
+- transposed convolutions
+- deconvolutions 
 
 
 
