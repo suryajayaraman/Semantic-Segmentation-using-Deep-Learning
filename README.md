@@ -15,6 +15,7 @@ Repo containing content for thinkautonomous image segmentation course
 - [Stanford Lecture video](https://www.youtube.com/watch?v=nDPWywWRIRo)
 - [Stanford lecture notes](http://cs231n.stanford.edu/slides/2017/cs231n_2017_lecture11.pdf
 )
+- [topbots semseg blog post](https://www.topbots.com/semantic-segmentation-guide/)
 - [Tips for Segmentation and object detection](https://neptune.ai/blog/data-exploration-for-image-segmentation-and-object-detection)
 - [Kaggle tips and tricks](https://neptune.ai/blog/image-segmentation-tips-and-tricks-from-kaggle-competitions)
 - [jeremy jordan blog post](https://www.jeremyjordan.me/semantic-segmentation/)
