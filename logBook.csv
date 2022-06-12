@@ -5,6 +5,10 @@ Sno,Date,startTime,endTime,Category,Description
 4. initial commit for repo"
 2,03-06-22,1500,1645,Literature survey,"1. image segmentation paper notes
 2. updated references in readme file"
-3,05-06-22,1415,1515,image segmentation course review,
-4,06-06-22,630,730,image segmentation architecture section completed,
-5,07-06-22,450,605,image segmentation course project section completed,
+3,05-06-22,1415,1515,Literature survey,image segmentation course review
+4,06-06-22,630,730,Literature survey,image segmentation architecture section completed
+5,07-06-22,450,605,Literature survey,image segmentation course project section completed
+6,09-06-22,730,800,Code setup,conda env setup with torch pkg installation
+7,11-06-22,1630,1715,Literature survey,"types of convolutions,  transposed convolutions"
+8,11-06-22,2130,2200,Code,FCN_resnet50 code review
+9,12-06-22,430,615,PPT,"FCNHead explanation, paper review done, ppt initial commit"
