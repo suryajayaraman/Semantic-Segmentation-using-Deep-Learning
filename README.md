@@ -29,6 +29,15 @@ Repo containing content for thinkautonomous image segmentation course
 - ***[segmentation models pytorch](https://github.com/qubvel/segmentation_models.pytorch)***
  -***[pytorch-semseg library](https://github.com/meetps/pytorch-semseg)***
 
+- **UNet Pytorch implementations**
+    - [link 1](https://github.com/milesial/Pytorch-UNet/blob/master/unet/unet_parts.py)
+
+    - [link 2](https://amaarora.github.io/2020/09/13/unet.html)
+
+    - [link 3](https://github.com/mateuszbuda/brain-segmentation-pytorch/blob/master/unet.py)
+
+    - [link 4](https://towardsdatascience.com/creating-and-training-a-u-net-model-with-pytorch-for-2d-3d-semantic-segmentation-model-building-6ab09d6a0862)
+
 
 - [Real time Sem Seg paperswithcode](https://paperswithcode.com/task/real-time-semantic-segmentation)
 - [deeplabv3 impl](https://github.com/fregu856/deeplabv3)
