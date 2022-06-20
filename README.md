@@ -47,12 +47,14 @@ Repo containing content for thinkautonomous image segmentation course
 - [HRNet Kaggle SemSeg post](https://www.kaggle.com/bibek777/try-hrnet-semantic-segmentation)
 - [Lyft perception challenge 4th place soln](https://github.com/NikolasEnt/Lyft-Perception-Challenge)
 - [Github post Awesome semantic segmentation](https://github.com/mrgloom/awesome-semantic-segmentation)
+- [Mask RCNN implementation for BDD100k](https://github.com/TilakD/Object-detection-and-segmentation-for-self-driving-cars)
 
 
 ### Transformer architectures for segmentation
 - [segmenter github](https://github.com/rstrudel/segmenter)
 - [UTNet](https://github.com/yhygao/UTNet)
 - [transUTNet](https://github.com/mkara44/transunet_pytorch)
+- [Hugging face transformer Segformer for Semantic segmentation](https://huggingface.co/blog/fine-tune-segformer)
 
 
 ### Semantic segmentation metrics
