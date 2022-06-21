@@ -74,4 +74,11 @@ Repo containing content for thinkautonomous image segmentation course
 - [IoU vs Dice](https://stats.stackexchange.com/questions/273537/f1-dice-score-vs-iou/276144#276144)
 - [survey of loss functions for semantic segmentation](https://arxiv.org/pdf/2006.14822.pdf)
 
+- [Focal loss medium post](https://medium.com/swlh/understanding-focal-loss-for-pixel-level-classification-in-convolutional-neural-networks-720f19f431b1)
 
+- [focal loss for segmentation blog post with code](https://becominghuman.ai/investigating-focal-and-dice-loss-for-the-kaggle-2018-data-science-bowl-65fb9af4f36c)
+
+ - [Loss functions with pytorch implentations](https://github.com/JunMa11/SegLoss)
+
+ - [Focal and Lovasz loss pytorch](https://github.com/Hsuxu/Loss_ToolBox-PyTorch)
+ 
