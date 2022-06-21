@@ -66,3 +66,12 @@ Repo containing content for thinkautonomous image segmentation course
 - [fastai forum post](https://forums.fast.ai/t/multi-class-semantic-segmentation-metrics-and-accuracy/74665/3)
 - [scikit learn jaccard score](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.jaccard_score.html)
 - [torchmetrics library](https://torchmetrics.readthedocs.io/en/latest/references/modules.html#iou)
+
+
+## Loss functions
+- [SMP implementations](https://smp.readthedocs.io/en/latest/losses.html)
+- [medium post](https://medium.com/@junma11/loss-functions-for-medical-image-segmentation-a-taxonomy-cefa5292eec0#:~:text=Generalized%20Dice%20loss%20is%20the,hard%20cases%20with%20low%20probabilities.)
+- [IoU vs Dice](https://stats.stackexchange.com/questions/273537/f1-dice-score-vs-iou/276144#276144)
+- [survey of loss functions for semantic segmentation](https://arxiv.org/pdf/2006.14822.pdf)
+
+
