@@ -61,11 +61,14 @@ Repo containing content for thinkautonomous image segmentation course
     - [Lextal implementation with pretrained backbones](https://github.com/Lextal/pspnet-pytorch)
     - [IanTaehoon implementation](https://github.com/IanTaehoonYoo/semantic-segmentation-pytorch/blob/master/segmentation/models/pspnet.py)
 
+- **deeplabv3 Pytorch implementations**
+    - [deeplabv3+ pytorch](https://github.com/VainF/DeepLabV3Plus-Pytorch)
+    - [pytorch-deeplab-xception](https://github.com/jfzhang95/pytorch-deeplab-xception)
+    - [deeplabv3+ DeepFashion2 dataset](https://github.com/giovanniguidi/deeplabV3-PyTorch)
+    - [deeplabv3 impl](https://github.com/fregu856/deeplabv3)    
+
 
 - [Real time Sem Seg paperswithcode](https://paperswithcode.com/task/real-time-semantic-segmentation)
-- [deeplabv3 impl](https://github.com/fregu856/deeplabv3)
-- [deeplabv3+ pytorch](https://github.com/VainF/DeepLabV3Plus-Pytorch)
-- [deeplabv3 r101](https://www.kaggle.com/mobassir/deeplabv3-resnet101-for-severstal-sdd)
 - [HRNet official implementation](https://github.com/HRNet/HRNet-Semantic-Segmentation)
 - [HRNet Kaggle SemSeg post](https://www.kaggle.com/bibek777/try-hrnet-semantic-segmentation)
 - [Lyft perception challenge 4th place soln](https://github.com/NikolasEnt/Lyft-Perception-Challenge)
