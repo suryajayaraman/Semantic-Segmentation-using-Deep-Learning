@@ -39,6 +39,7 @@ Repo containing content for thinkautonomous image segmentation course
 - [jeremy jordan blog post](https://www.jeremyjordan.me/semantic-segmentation/)
 - [CVPR 2022 papers summary](https://github.com/Jeremy26/CVPR-2022-Papers-EN/blob/main/README.md#2)
 - [PAN blog post](https://medium.com/mlearning-ai/review-pan-pyramid-attention-network-for-semantic-segmentation-semantic-segmentation-8d94101ba24a)
+- [Xception Net blog post](https://towardsdatascience.com/review-xception-with-depthwise-separable-convolution-better-than-inception-v3-image-dc967dd42568)
 
 
 ### Code implementations
@@ -64,7 +65,6 @@ Repo containing content for thinkautonomous image segmentation course
 - **deeplabv3 Pytorch implementations**
     - [deeplabv3+ pytorch](https://github.com/VainF/DeepLabV3Plus-Pytorch)
     - [pytorch-deeplab-xception](https://github.com/jfzhang95/pytorch-deeplab-xception)
-    - [deeplabv3+ DeepFashion2 dataset](https://github.com/giovanniguidi/deeplabV3-PyTorch)
     - [deeplabv3 impl](https://github.com/fregu856/deeplabv3)    
 
 
