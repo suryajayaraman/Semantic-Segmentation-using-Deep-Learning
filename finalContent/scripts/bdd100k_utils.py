@@ -60,8 +60,7 @@ class BDD100k_dataset(Dataset):
         return rgb_image, label_image  
 
 
-
-def get_dataloaders(images, labels):
+def get_datasets(images, labels):
     data = BDD100k_dataset(images, labels, tf=preprocess)
 
     # split train data into train, validation and test sets
@@ -71,8 +70,11 @@ def get_dataloaders(images, labels):
     test_count = total_count - train_count - valid_count
     train_set, val_set, test_set = torch.utils.data.random_split(data, 
                 (train_count, valid_count, test_count), generator=torch.Generator().manual_seed(1))
+    return train_set, val_set, test_set
 
+
+def get_dataloaders(train_set, val_set, test_set):
     train_dataloader = DataLoader(train_set, batch_size=8,drop_last=True)
     val_dataloader   = DataLoader(val_set, batch_size=8)
     test_dataloader  = DataLoader(test_set, batch_size=8)
-    return train_dataloader, val_dataloader, test_set, test_dataloader
+    return train_dataloader, val_dataloader, test_dataloader
