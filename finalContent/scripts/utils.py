@@ -295,4 +295,46 @@ def visualizePredictions(model : torch.nn.Module, dataSet : Dataset,
         axes[i, 2].imshow(train_id_to_color[label_class_predicted])
         axes[i, 2].set_title("Predicted Label")
 
-    plt.show()    
+    plt.show()
+
+
+
+
+# input_video_path = f'{dataset_path}/bdd100k_test_{targetWidth}_{targetHeight}.avi'
+# output_video_path = f'{output_path}/{MODEL_NAME}_output_{targetWidth}_{targetHeight}.avi'
+
+# # handles for input output videos
+# input_handle = cv2.VideoCapture(input_video_path)
+# output_handle = cv2.VideoWriter(output_video_path, cv2.VideoWriter_fourcc(*'DIVX'), 5, (targetWidth, targetHeight))
+
+# # create progress bar
+# num_frames = int(input_handle.get(cv2.CAP_PROP_FRAME_COUNT))
+# pbar = tqdm(total = num_frames, position=0, leave=True)
+
+# while(input_handle.isOpened()):
+#     ret, frame = input_handle.read()
+#     if ret == True:
+#         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+#         # create torch tensor to give as input to model
+#         pt_image = preprocess(frame)
+#         pt_image = pt_image.to(device)
+
+#         # get model prediction and convert to corresponding color
+#         y_pred = torch.argmax(model(pt_image.unsqueeze(0)), dim=1).squeeze(0)
+#         predicted_labels = y_pred.cpu().detach().numpy()
+#         cm_labels = (train_id_to_color[predicted_labels]).astype(np.uint8)
+
+#         # overlay prediction over input frame
+#         overlay_image = cv2.addWeighted(frame, 1, cm_labels, 0.25, 0)
+#         overlay_image = cv2.cvtColor(overlay_image, cv2.COLOR_RGB2BGR)
+
+#         # write output result and update progress
+#         output_handle.write(overlay_image)
+#         pbar.update(1)
+
+#     else:
+#         break
+
+# output_handle.release()
+# input_handle.release()
