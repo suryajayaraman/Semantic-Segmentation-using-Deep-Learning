@@ -243,8 +243,8 @@ def train_validate_model(model, num_epochs, model_name, criterion, optimizer,
         # if validation loss has decreased, save model and reset variable
         if validation_loss <= min_val_loss:
             min_val_loss = validation_loss
-            # torch.save(model.state_dict(), f"{output_path}/{model_name}.pt")
-            torch.jit.save(torch.jit.script(model), f"{output_path}/{model_name}.pt")
+            torch.save(model.state_dict(), f"{output_path}/{model_name}.pt")
+            # torch.jit.save(torch.jit.script(model), f"{output_path}/{model_name}.pt")
 
 
     # plot results
