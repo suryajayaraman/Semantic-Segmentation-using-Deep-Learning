@@ -193,7 +193,7 @@ def evaluate_model(model, dataloader, criterion, metric_class, num_classes, devi
 
 def train_validate_model(model, num_epochs, model_name, criterion, optimizer, 
                          device, dataloader_train, dataloader_valid, 
-                         metric_class, metric_name, lr_scheduler = None,
+                         metric_class, metric_name, num_classes, lr_scheduler = None,
                          output_path = '.'):
     # initialize placeholders for running values
     results = []    
@@ -230,7 +230,7 @@ def train_validate_model(model, num_epochs, model_name, criterion, optimizer,
         # compute per batch losses, metric value
         train_loss = train_loss / len(dataloader_train)
         validation_loss, validation_metric = evaluate_model(
-                        model, dataloader_valid, criterion, metric_class, device)
+                        model, dataloader_valid, criterion, metric_class, num_classes, device)
 
         print(f'Epoch: {epoch+1}, trainLoss:{train_loss:6.5f}, validationLoss:{validation_loss:6.5f}, {metric_name}:{validation_metric: 4.2f}')
         
@@ -257,7 +257,7 @@ def train_validate_model(model, num_epochs, model_name, criterion, optimizer,
 # FUNCTION TO VISUALIZE MODEL PREDICTIONS
 ###################################
 
-def visualizePredictions(model : torch.nn.Module, dataSet : Dataset,  
+def visualize_predictions(model : torch.nn.Module, dataSet : Dataset,  
         axes, device :torch.device, numTestSamples : int):
     """Function visualizes predictions of input model on samples from
     cityscapes dataset provided
