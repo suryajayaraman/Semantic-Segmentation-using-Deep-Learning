@@ -7,9 +7,12 @@ from collections import namedtuple
 
 # DL library imports
 import torch
+import torch.nn as nn
 from torchvision import transforms
 from torch.utils.data import Dataset, DataLoader
 
+# For dice loss function
+import segmentation_models_pytorch as smp
 
 ###################################
 # FILE CONSTANTS
@@ -136,6 +139,32 @@ class meanIoU:
     def reset(self):
         self.iou_metric = 0.0
         self.confusion_matrix = np.zeros((self.num_classes, self.num_classes))
+
+
+
+###################################
+# PSPNET LOSS FUNCTION DEFINITION
+###################################
+
+class pspnet_loss(nn.Module):
+    def __init__(self, num_classes, aux_weight):
+        super(pspnet_loss, self).__init__()
+        self.aux_weight = aux_weight
+        self.loss_fn = smp.losses.DiceLoss('multiclass', 
+                        classes=np.arange(num_classes).tolist(), log_loss = True, smooth=1.0)
+    
+    def forward(self, preds, labels):
+        # if input predictions is in dict format
+        # calculate total loss as weighted sum of 
+        # main and auxiliary losses
+        if(isinstance(preds, dict) == True):
+            main_loss = self.loss_fn(preds['main'], labels)
+            aux_loss = self.loss_fn(preds['aux'], labels)
+            loss = (1 - self.aux_weight) * main_loss + self.aux_weight * aux_loss
+        else:
+            loss = self.loss_fn(preds, labels)
+        return loss
+
 
 
 ###################################
