@@ -81,6 +81,18 @@ Repo containing content for thinkautonomous image segmentation course
     - [Panoptic Segformer](https://github.com/zhiqi-li/Panoptic-SegFormer)
     
 
+
+### LayerNorm vs BatchNorm
+- [Normalization technqiues blog post](https://medium.com/techspace-usict/normalization-techniques-in-deep-neural-networks-9121bf100d8)
+- [Math behind LayerNorm](https://stats.stackexchange.com/questions/474440/why-do-transformers-use-layer-norm-instead-of-batch-norm)
+- [Pytorch Layernorm](https://pytorch.org/docs/stable/generated/torch.nn.LayerNorm.html)
+- [Understanding LayerNorm arXiv paper](https://proceedings.neurips.cc/paper/2019/file/2f4fe03d77724a7217006e5d16728874-Paper.pdf)
+- [LayerNorm wandbi example](https://wandb.ai/wandb_fc/LayerNorm/reports/Layer-Normalization-in-Pytorch-With-Examples---VmlldzoxMjk5MTk1)
+
+
+
+
+### Other Segmentation references
 - [Real time Sem Seg paperswithcode](https://paperswithcode.com/task/real-time-semantic-segmentation)
 - [HRNet official implementation](https://github.com/HRNet/HRNet-Semantic-Segmentation)
 - [HRNet Kaggle SemSeg post](https://www.kaggle.com/bibek777/try-hrnet-semantic-segmentation)
