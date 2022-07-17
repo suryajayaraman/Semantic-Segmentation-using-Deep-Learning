@@ -73,10 +73,13 @@ Repo containing content for thinkautonomous image segmentation course
     - [Segformer arXiv paper](https://arxiv.org/abs/2105.15203)
     - [Official pytorch](https://github.com/NVlabs/SegFormer)
     - [Hugging face Segformer example](https://huggingface.co/docs/transformers/model_doc/segformer)
-    - [Medium post 1](https://towardsdatascience.com/implementing-segformer-in-pytorch-8f4705e2ed0e)    
-    - [Author own implementation](https://github.com/lucidrains/segformer-pytorch)
+    - [Medium post 1](https://towardsdatascience.com/implementing-segformer-in-pytorch-8f4705e2ed0e)
+    - [Segformer and HRNet pytorch implementation](https://github.com/camlaedtke/segmentation_pytorch)
+    - [segformer-pytorch github](https://github.com/rulixiang/segformer-pytorch)
+    - [Segformer with pretrained weights](https://github.com/anibali/segformer)
     - [Niels Rogge colab tutorial](https://colab.research.google.com/github/NielsRogge/Transformers-Tutorials/blob/master/SegFormer/Fine_tune_SegFormer_on_custom_dataset.ipynb#scrollTo=TMYYJ7_do08a)
-
+    - [Panoptic Segformer](https://github.com/zhiqi-li/Panoptic-SegFormer)
+    
 
 - [Real time Sem Seg paperswithcode](https://paperswithcode.com/task/real-time-semantic-segmentation)
 - [HRNet official implementation](https://github.com/HRNet/HRNet-Semantic-Segmentation)
