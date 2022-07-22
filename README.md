@@ -90,6 +90,20 @@ Repo containing content for thinkautonomous image segmentation course
 - [LayerNorm wandbi example](https://wandb.ai/wandb_fc/LayerNorm/reports/Layer-Normalization-in-Pytorch-With-Examples---VmlldzoxMjk5MTk1)
 
 
+## Visualizing networks
+- [DeepAI Quickie YT video](https://www.youtube.com/watch?v=I3VnY01JpSo)
+- [DeepAI Quickie git repo](https://github.com/EscVM/EscVM_YT/blob/master/Notebooks/2%20-%20PT1.X%20DeepAI-Quickie/pt_1_vit_attention.ipynb)
+- [Visual guide to Attention Math of Intelligence YT video](https://www.youtube.com/watch?v=mMa2PmYJlCo&t=58s)
+- [vision transformer visualize attention map kaggle page](https://www.kaggle.com/code/piantic/vision-transformer-vit-visualize-attention-map/notebook)
+- [visualize attention map git repo issue](https://github.com/tczhangzhi/VisionTransformer-Pytorch/issues/1)
+- [Vision transformer colab noteobok](https://colab.research.google.com/github/hirotomusiker/schwert_colab_data_storage/blob/master/notebook/Vision_Transformer_Tutorial.ipynb)
+- [exploring explainability of vision transformer](https://jacobgil.github.io/deeplearning/vision-transformer-explainability)
+- [vit explain git repo](https://github.com/jacobgil/vit-explain)
+- [Visualizing and understanding patch interactions in vision transformer](https://arxiv.org/abs/2203.05922)
+- [Dino library](https://github.com/facebookresearch/dino)
+- [lucid rains vit pytorch](https://github.com/lucidrains/vit-pytorch)
+- [pytorch image models visualization self attention code](https://github.com/rwightman/pytorch-image-models/discussions/1232)
+
 
 
 ### Other Segmentation references
