@@ -103,7 +103,8 @@ Repo containing content for thinkautonomous image segmentation course
 - [Dino library](https://github.com/facebookresearch/dino)
 - [lucid rains vit pytorch](https://github.com/lucidrains/vit-pytorch)
 - [pytorch image models visualization self attention code](https://github.com/rwightman/pytorch-image-models/discussions/1232)
-
+- [Transformer Interpretability Beyond Attention Visualization](https://arxiv.org/pdf/2012.09838v1.pdf)
+- [Transformer explainability git repo](https://github.com/hila-chefer/Transformer-Explainability)
 
 
 ### Other Segmentation references
