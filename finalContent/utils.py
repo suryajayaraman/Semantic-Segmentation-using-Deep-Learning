@@ -335,7 +335,8 @@ def train_validate_model(model, num_epochs, model_name, criterion, optimizer,
 ###################################
 
 def visualize_predictions(model : torch.nn.Module, dataSet : Dataset,  
-        axes, device :torch.device, numTestSamples : int):
+        axes, device :torch.device, numTestSamples : int,
+        id_to_color : np.ndarray = train_id_to_color):
     """Function visualizes predictions of input model on samples from
     cityscapes dataset provided
 
@@ -344,6 +345,7 @@ def visualize_predictions(model : torch.nn.Module, dataSet : Dataset,
         dataSet (Dataset): dataset to take samples from
         device (torch.device): compute device as in GPU, CPU etc
         numTestSamples (int): number of samples to plot
+        id_to_color (np.ndarray) : array to map class to colormap
     """
     model.to(device=device)
     model.eval()
@@ -363,13 +365,13 @@ def visualize_predictions(model : torch.nn.Module, dataSet : Dataset,
 
         # groundtruth label image
         label_class = gt.cpu().detach().numpy()
-        axes[i, 1].imshow(train_id_to_color[label_class])
+        axes[i, 1].imshow(id_to_color[label_class])
         axes[i, 1].set_title("Groudtruth Label")
 
         # predicted label image
         y_pred = torch.argmax(model(inputImage.unsqueeze(0)), dim=1).squeeze(0)
         label_class_predicted = y_pred.cpu().detach().numpy()    
-        axes[i, 2].imshow(train_id_to_color[label_class_predicted])
+        axes[i, 2].imshow(id_to_color[label_class_predicted])
         axes[i, 2].set_title("Predicted Label")
 
     plt.show()
