@@ -121,7 +121,7 @@ Repo containing content for thinkautonomous image segmentation course
 - [UTNet](https://github.com/yhygao/UTNet)
 - [transUTNet](https://github.com/mkara44/transunet_pytorch)
 - [Hugging face transformer Segformer for Semantic segmentation](https://huggingface.co/blog/fine-tune-segformer)
-
+- ## [UVA DLC Advanced DL](https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial6/Transformers_and_MHAttention.html#The-Transformer-architecture)
 
 ### Semantic segmentation metrics
 - [pytorch official impl](https://github.com/pytorch/vision/blob/main/references/segmentation/utils.py)
