@@ -147,3 +147,8 @@ Repo containing content for thinkautonomous image segmentation course
  - [Loss functions with pytorch implentations](https://github.com/JunMa11/SegLoss)
 
  - [Focal and Lovasz loss pytorch](https://github.com/Hsuxu/Loss_ToolBox-PyTorch)
+
+
+ ## Git repo references
+ - [Francesco Saverio Zuppichini](https://github.com/FrancescoSaverioZuppichini)
+ - [Jacob Gildenblat](https://github.com/jacobgil)
