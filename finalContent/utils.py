@@ -17,6 +17,10 @@ from torch.optim.lr_scheduler import _LRScheduler
 # For dice loss function
 import segmentation_models_pytorch as smp
 
+# for interactive widgets
+import IPython.display as Disp
+from ipywidgets import widgets
+
 ###################################
 # FILE CONSTANTS
 ###################################
@@ -46,6 +50,62 @@ drivables = [
             ]
 train_id_to_color = [c.color for c in drivables if (c.train_id != -1 and c.train_id != 255)]
 train_id_to_color = np.array(train_id_to_color)
+
+
+
+#####################################
+### ROI SELECT CLASS DEFINITION ##
+#####################################
+
+class roi_select():
+    def __init__(self,im, figsize=(12,6), line_color=(255,0,0)):
+        # class variables
+        self.im = im
+        self.selected_points = []
+        self.line_color = line_color
+
+        # plot input image, store figure handles
+        self.fig,ax = plt.subplots(figsize=figsize)
+        self.img = ax.imshow(self.im.copy())
+        plt.suptitle('Select Rectangular ROI')
+
+        # connect event handlers
+        self.ka = self.fig.canvas.mpl_connect('button_press_event', self.onclick)
+        disconnect_button = widgets.Button(description="Disconnect mpl")
+        Disp.display(disconnect_button)
+        disconnect_button.on_click(self.disconnect_mpl)
+        
+    def draw_roi_on_img(self,img,pts):
+        # plot polygon edges in single color 
+        pts = np.array(pts, np.int32)
+        pts = pts.reshape((-1,2))
+        # cv2.polylines(img, [pts], True, self.line_color, 5)
+        cv2.rectangle(img, pts[0], pts[1], self.line_color, 5)
+        return img
+
+    def onclick(self, event):
+        self.selected_points.append([event.xdata,event.ydata])
+        if len(self.selected_points) == 2:
+            self.img.set_data(self.draw_roi_on_img(self.im.copy(),self.selected_points))
+            self.disconnect_mpl(None)
+
+    def disconnect_mpl(self,_):
+        self.fig.canvas.mpl_disconnect(self.ka)
+
+
+    def get_bbox_indices(self, scale_factor = None):
+        pts = np.array(self.selected_points)
+        if(scale_factor is not None):
+            pts = pts * scale_factor
+
+        # bounding box coordinates as indices 
+        # min_x, min_y is top left index
+        # max_x, max_y is bottom right index
+        roi_indices = pts.astype(int)
+        indices = {}
+        indices['min_x'], indices['min_y'] = np.min(roi_indices, axis=0)
+        indices['max_x'], indices['max_y'] = np.max(roi_indices, axis=0)
+        return indices
 
 
 #####################################
