@@ -156,11 +156,11 @@ def get_datasets(images, labels):
 # FUNCTION TO GET TORCH DATALOADER  #
 ###################################
 
-def get_dataloaders(train_set, val_set, test_set):
-    train_dataloader = DataLoader(train_set, batch_size=8,drop_last=True)
-    val_dataloader   = DataLoader(val_set, batch_size=8)
-    test_dataloader  = DataLoader(test_set, batch_size=8)
-    return train_dataloader, val_dataloader, test_dataloader    
+def get_dataloaders(train_set, val_set, test_set, batch_size=8):
+    train_dataloader = DataLoader(train_set, batch_size=batch_size,drop_last=True)
+    val_dataloader   = DataLoader(val_set, batch_size=batch_size)
+    test_dataloader  = DataLoader(test_set, batch_size=batch_size)
+    return train_dataloader, val_dataloader, test_dataloader   
 
 
 
