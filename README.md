@@ -1,16 +1,16 @@
 # thinkautonomous_imageSegmentation
 Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thinkautonomous.ai](https://courses.thinkautonomous.ai/image-segmentation). This post is a gist of what the course teaches for anyone willing to learn about <u>Semantic Segmentation using Modern Deep Learning</u>
 
-<span style="background-color:grey">Semantic Segmentation</span> <span style="background-color:grey">Pytorch</span> <span style="background-color:grey">Deeplabv3+</span>
+<!-- <span style="background-color:grey">Semantic Segmentation</span> <span style="background-color:grey">Pytorch</span> <span style="background-color:grey">Deeplabv3+</span> -->
 
 [![Driveable Area Segmentation in Paris](images/Driveable_area_segmentation_Paris.gif)](https://www.youtube.com/watch?v=M6b9pjjvFw0 "Driveable Area Segmentation in streets of Paris")
 
 ## Agenda
 - [Problem Statement](#problem-statement)
 - [Deep Learning Project Components](#deep-learning-project-components)
-- [Dataset]()
-- [Loss function]()
-- [Metric]()
+- [Dataset](#dataset)
+- [Loss function](#loss-function)
+- [Metric](#metric)
 - [Model]()
 - [HyperParameters]()
 - [Results]()
@@ -40,10 +40,44 @@ Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thin
 
 ## Dataset
 - We use the `Driveable Area` segment from [BDD100K dataset](https://www.bdd100k.com/) dataset for our project
-- 3k labeled images split randomly into train, validation and test images(2.1k, 0.6k and 0.3k) 
-- 
+- 3k labeled images split randomly into train, validation and test images (2.1k, 0.6k and 0.3k) 
+![label formats](images/presentation/label_formats.jpeg)
+- Labels are converted to type A as its smaller and efficient to work with
+- As with most semantic segmentation datasets, there is data imbalance
 
-- It's a diverse dataset containing > 1000 hours of annotations for **Multi-Task Learning** tasks like Object Detection, Semantic, Instance Segmentation
+| Class      | % in Dataset |
+| ----------- | ----------- |
+| Direct lane      |11.7%      |
+| Alternate lane   | 4.7%       |
+| Background   | 83.6%      |
+- **We'll need to account for class imabalance when selecting the loss function and metric**
+- Not much Data Augumentation was applied other than *Normalization using Imagenet mean, standard deviation**
+
+
+## Loss function
+- As mentioned earlier, Loss function must be able to handle class imbalance
+- Problems in Medical image processing face similar issues and we can take cues from approaches taken there
+
+| Loss function      | Use case |
+| ----------- | ----------- |
+| Multi-class Cross entropy     |Multi-class version with option for weights for different classes      |
+|Focal Loss  | Highly-imbalanced dataset, down-weight the contribution of easy examples, enabling model to learn hard examples      |
+| Dice Loss   | Inspired from Dice Coefficient, a segmentation metric.
+Suitable for imbalanced datasets |
+| Tversky Loss | Variant of Dice Coefficient. Add weight to False positives and False negatives.     |
+
+- Considering the imbalance in the dataset and literature review, **Dice loss** is chosen as loss function. Dataset is imbalanced, but not to the extreme levels of Medical Image segmentation where Focal loss could have better results
+
+
+## Metric
+- As Semantic segmentation is an extension of classification problem, classification metrics like Accuracy, Precision, Recall, F1 score can also be applied
+- Considering imbalanced nature of dataset, **mean IoU** is chosen as Evaluation Metric.
+- Also, it's the **industry standanrd for most segmentation tasks**
+
+![meanIoU_example](images/presentation/meanIoU_example.PNG)
+[Image reference](https://www.jeremyjordan.me/evaluating-image-segmentation-models/)
+
+## Models
 
 ## Results
 
