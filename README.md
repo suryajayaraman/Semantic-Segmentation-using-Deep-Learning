@@ -6,7 +6,7 @@ Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thin
 [![Driveable Area Segmentation in Paris](images/Driveable_area_segmentation_Paris.gif)](https://www.youtube.com/watch?v=M6b9pjjvFw0 "Driveable Area Segmentation in streets of Paris")
 
 - [***For people already aware of fundamental concepts, here's a deepdive into SEGFORMERS -one of SOTA for Segmentation tasks***](Segformer_deepdive.md)
-- [***For people interested in Deployment strategies - here's a deepdive into Neural  Optimization techniques***](https://github.com/suryajayaraman/thinkAutonomous_modelOptimization)
+- [***For people interested in Deployment strategies - here's a deepdive into Neural  Optimization techniques***](https://github.com/suryajayaraman/thinkAutonomous_modelOptimization/blob/main/README.md)
 
 ## Agenda
 - [Problem Statement](#problem-statement)
@@ -19,8 +19,8 @@ Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thin
 - [Results](#results)
     - [Model wise comparison](#model-wise-comparison)
     - [Costa Rica Challenge](#costa-rica-challenge)
-- [Things that didn't work]()
-- [Annexure]()
+- [Things that didn't work](#things-that-didnt-work)
+- [Annexure](#annexure)
     - [References](references.md)
     - [Applications](#applications)
     - [Semantic vs Instance Segmentation](#semantic-vs-instance-segmentation)
