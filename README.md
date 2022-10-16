@@ -1,9 +1,35 @@
 # thinkautonomous_imageSegmentation
-Repo containing content for thinkautonomous image segmentation course 
+Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thinkautonomous.ai](https://courses.thinkautonomous.ai/image-segmentation). This post is a gist of what the course teaches for anyone willing to learn about <u>Semantic Segmentation using Modern Deep Learning</u>
 
-- Image segmentation -> process of classifying each pixel in an image belonging to a certain class.
-- Semantic segmentation = classifying each pixel belonging to a particular label. It doesn't different across different instances of the same object. For example if there are 2 cats in an image, semantic segmentation gives same label to all the pixels of both cats
-- Instance segmentation = Instance segmentation differs from semantic segmentation in the sense that it gives a unique label to every instance of a particular object in the image. As can be seen in the image above all 3 dogs are assigned different colours i.e different labels. With semantic segmentation all of them would have been assigned the same colour.
+## Agenda
+- [Problem Statement](#problem-statement)
+- [Applications](#applications)
+- [Semantic vs Instance Segmentation](#semantic-vs-instance-segmentation)
+
+## Problem Statement
+- Goal of Semantic Segmentation is to `Classify each pixel in an image belonging to a certain class`
+- The label for each pixel itself can be <u>discrete (like object type -car, human, tree, etc) or continous (distance of object from sensor)</u>
+
+![Semantic Segmentation idea](images/presentation/semantic_segmentation_idea.png)
+[Image source](https://www.researchgate.net/figure/Semantic-segmentation-of-a-scene-from-the-Cityscapes-dataset-by-Cordts-et-al-2016_fig24_316270100)
+
+
+
+## Applications
+- Semantic segmentation can be applied wherever Image and Image-like data is available, hence has numerous use-cases some of which are highlighted below
+
+![Semantic Segmentation Applications](images/presentation/Semantic_segmentation_applications.png)
+
+
+[Image source](https://keymakr.com/blog/semantic-segmentation-uses-and-applications/)
+
+
+## Semantic vs Instance Segmentation
+- Semantic Segmentation doesn't differentiate across different instances of the same object while Instance Segmentation does
+
+
+![Semantic vs Instance Segmentation](images/presentation/instance_vs_semantic_segmentation.png)
+
 
 
 
