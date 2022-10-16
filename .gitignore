@@ -5,6 +5,7 @@ weights/
 finalContent/dataset/
 finalContent/scripts/__pycache__/
 finalContent/__pycache__/
+.vscode/
 
 images/360_640.zip
 images/cityScapes.zip
