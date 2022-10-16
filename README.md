@@ -3,12 +3,29 @@ Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thin
 
 ## Agenda
 - [Problem Statement](#problem-statement)
+- [Deep Learning Project Components](#deep-learning-project-components)
+
+
+- [Inference Strategy](#inference-strategy)
 - [Applications](#applications)
 - [Semantic vs Instance Segmentation](#semantic-vs-instance-segmentation)
 
 ## Problem Statement
-- Goal of Semantic Segmentation is to `Classify each pixel in an image belonging to a certain class`
-- The label for each pixel itself can be <u>discrete (like object type -car, human, tree, etc) or continous (distance of object from sensor)</u>
+- **Multi-class Segmentation Problem** - specifically to classify each pixel in an image to one of following 3 classes:
+    - Direct / current lane (label = 0)
+    - Alternative lane (label = 1)
+    - Background (label = 2)
+
+![problem statement](images/presentation/problem_statement.PNG)
+
+
+## Deep Learning Project Components
+- Following are the key areas of focus when trying to solve any Deep Learning Project PoC 
+
+![Deep_learning_project_components](images/presentation/Deep_learning_project_components.png)
+
+
+## Inference Strategy
 
 ![Semantic Segmentation idea](images/presentation/semantic_segmentation_idea.png)
 [Image source](https://www.researchgate.net/figure/Semantic-segmentation-of-a-scene-from-the-Cityscapes-dataset-by-Cordts-et-al-2016_fig24_316270100)
