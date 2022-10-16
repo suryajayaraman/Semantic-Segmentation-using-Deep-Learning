@@ -1,4 +1,6 @@
 # Image Segmentation References
+ 
+ This is a collection of references to related blog posts, git repositories, research papers, libraries explaining many of concepts explained in the course
 
 ## Types of convolutions
 1. [Medium post on different types of convolutions in DL](https://towardsdatascience.com/a-comprehensive-introduction-to-different-types-of-convolutions-in-deep-learning-669281e58215)
