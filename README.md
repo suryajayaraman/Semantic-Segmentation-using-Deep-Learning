@@ -1,5 +1,5 @@
 # thinkautonomous_imageSegmentation
-Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thinkautonomous.ai](https://courses.thinkautonomous.ai/image-segmentation). This post is a gist of what the course teaches for anyone willing to learn about <u>Semantic Segmentation using Modern Deep Learning</u>
+Repo contains content created for `IMAGE SEGMENTATION COURSE` offered at [thinkautonomous.ai](https://courses.thinkautonomous.ai/image-segmentation). This post is a gist of what the course teaches for anyone willing to learn about <u>Semantic Segmentation using Modern Deep Learning</u>
 
 <!-- <span style="background-color:grey">Semantic Segmentation</span> <span style="background-color:grey">Pytorch</span> <span style="background-color:grey">Deeplabv3+</span> -->
 
@@ -7,6 +7,7 @@ Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thin
 
 - [***For people already aware of fundamental concepts, here's a deepdive into SEGFORMERS -one of SOTA for Segmentation tasks***](Segformer_deepdive.md)
 - [***For people interested in Deployment strategies - here's a deepdive into Neural  Optimization techniques***](https://github.com/suryajayaraman/thinkAutonomous_modelOptimization/blob/main/README.md)
+- [***CLICK HERE TO CHECK OUT ALL OF MY PROJECTS***](https://suryajayaraman.github.io/)
 
 ## Agenda
 - [Problem Statement](#problem-statement)
@@ -41,7 +42,7 @@ Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thin
 
 
 ## Dataset
-- We use the `Driveable Area` segment from [BDD100K dataset](https://www.bdd100k.com/) dataset for our project
+- We use the `Driveable Area` segment from [BDD100K dataset](https://www.bdd100k.com/) for our project
 - 3k labeled images split randomly into train, validation and test images (2.1k, 0.6k and 0.3k) 
 - Input Image -> (360, 640, 3) RGB image and labels -> (360, 640) **uint8 datatype**
 ![label formats](images/presentation/label_formats.jpeg)
@@ -53,8 +54,8 @@ Repo contains content created a for `IMAGE SEGMENTATION COURSE` offered at [thin
 | Direct lane      |11.7%      |
 | Alternate lane   | 4.7%       |
 | Background   | 83.6%      |
-- **We'll need to account for class imabalance when selecting the loss function and metric**
-- No Data Augumentation was applied other than *Normalization using Imagenet mean, standard deviation**
+- **We'll need to account for class imbalance when selecting the loss function and metric**
+- No Data Augumentation was applied other than *Normalization using Imagenet mean, standard deviation*
 
 
 ## Loss function
