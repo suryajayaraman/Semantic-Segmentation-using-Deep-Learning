@@ -29,7 +29,7 @@ Repo contains content created for `SEGFORMERS COURSE` offered at [thinkautonomou
 
 
 ## Deep Learning Project Components
-- Following are the key areas of focus when trying to solve any Deep Learning Project PoC 
+Following are the key areas of focus when trying to solve any Deep Learning Project PoC 
 
 ![Deep_learning_project_components](images/presentation/Deep_learning_project_components.png)
 
