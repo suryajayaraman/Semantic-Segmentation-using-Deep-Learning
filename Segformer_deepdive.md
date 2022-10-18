@@ -17,8 +17,18 @@ Repo contains content created for `SEGFORMERS COURSE` offered at [thinkautonomou
     - [Loss function](#loss-function)
     - [Metric](#metric)
 - [Attention Mechanism](#attention-mechanism)
+- [Transformers](#transformers)
+- [Vision Transformers](#vision-transformers)
+    - [Intuition of ViT](#intuition-of-vit)
+- [Segformers](#segformers)
+    - [Overlap Patch Embedding](#overlap-patch-embedding)
+    - [Efficient self-attention](#efficient-self-attention)
+    - [Mix FFN](#mix-ffn)
+    - [Transformer block](#transformer-block)
+    - [All MLP Decoder](#all-mlp-decoder)
 - [HyperParameters](#hyperparameters)
 - [Results](#results)
+- [Visualizing Attention Mask](#visualizing-attention-mask)
 - [Things that didn't work](#things-that-didnt-work)
 
 
@@ -59,10 +69,36 @@ Gradients are nicer in CE compared to Dice loss
 - It's the <u>industry standanrd for most segmentation tasks</u>
 
 
+## Attention Mechanism
+
+## Transformers
+
+## Vision Transformers
+
+## Intuition of ViT
+
+## Segformers
+
+![](images/presentation/segformer_corrected.png)
+
+### Overlap Patch Embedding
+![](images/presentation/overlap_patch_embeddings_output.png)
 
 
+### Efficient self-attention
+![](images/presentation/Attention_mechanism.png)
 
 
+### Mix FFN
 
+
+### Transformer block
+
+### All MLP Decoder
+
+![](images/presentation/Segformer_decoder_arch.png)
+## HyperParameters
+## Results
+## Visualizing Attention Mask
 
 [![Segformer MiT B3 Attention Head Visualize](images/Segformer_MiT_B3_Cityscapes_Attention_Head_visualize.gif)](https://www.youtube.com/watch?v=BG8MoGAYMkA "Segformer-MiT-B3 Attention heads visualization on Cityscapes dataset")
