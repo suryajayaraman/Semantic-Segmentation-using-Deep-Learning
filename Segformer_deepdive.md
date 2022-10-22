@@ -21,15 +21,15 @@ Repo contains content created for `SEGFORMERS COURSE` offered at [thinkautonomou
     - [Self-Attention](#self-attention)
     - [Query, Key and Value](#query-key-and-value)
     - [Multi-Head Self-Attention](#multi-head-self-attention)
-    - [Pros and Cons of Transformer]()
+    - [Pros and Cons of Transformer](#pros-and-cons-of-transformer)
 - [Vision Transformers](#vision-transformers)
     - [Intuition of ViT](#intuition-of-vit)
 - [Segformers](#segformers)
     - [Overlap Patch Embedding](#overlap-patch-embedding)
     - [Efficient self-attention](#efficient-self-attention)
-    - [Attention Intuition in images]()
+    - [Attention Intuition in images](#attention-intuition-in-images)
     - [Mix FFN](#mix-ffn)
-    - [Encoder]()
+    - [Encoder](#encoder)
     - [All MLP Decoder](#all-mlp-decoder)
 - [HyperParameters](#hyperparameters)
 - [Results](#results)
@@ -194,33 +194,60 @@ Gradients are nicer in CE compared to Dice loss
 ### Attention Intuition in images
 - In segmentation, we're trying to build classes together. So <u>attention will try to group similar classes together, car with car and tree with tree </u>. If depth estimation, pixels containing relevant features will have more weights.
 - Attention helps identify related context at location. If you’re looking for car, what is related parts in the entire images
-- `Query and key are two different spaces (key is more abstract feature map in efficient version), how to group low level features to get more meaningful vut abstract feature. Attention serves as bridge`
-
+- `Query and key are two different spaces (key is more abstract feature map in efficient version), how to group low level features to get more meaningful vut abstract feature. Attention serves as bridge`. 
 ![Attention_mechanism](images/presentation/Attention_mechanism.png)
 
-- Simplistically, we can consider  
 
+- Simplistically, we can understand attention for 1st pixel as follows : how similar is every pixel in Query to the 1st pixel in Key. This would give attention map for the 1st pixel. This is computed by calculating the Dot Product b/w and Query, softmax. 
+![Attention_formula](images/presentation/Attention_formula.PNG)
+- Similarly iterating over each pixel in key we'd get attention maps for each.
 
-- [Notebook](finalContent/Efficient_self_attention_intuition.ipynb) explains Efficient Self Attention step by step for 
-
-
-Attention intuition - Andrej Karpathy Tesla AI video 2021 from 58:00 to 01:03 5 minutes
-Different types of attention
-
-
-
+- [Notebook](finalContent/Efficient_self_attention_intuition.ipynb) explains Efficient Self Attention step by step in images context
 
 
 ### Mix FFN
+- Mix Feedforward Network is used as proxy to Positional Encoding (PE) used in Vision Transformers. 
+- Authors propose that using PE causes model to perform poor with different test resolution, they use combination of Convolution and Feedforward modules (hence called Mix FFN) to let model learn position information
+
+![Mix_feedforward](images/presentation/Mix_feedforward.png)
 
 
-### Transformer block
+### Encoder
+- Combining the following modules we get the Transformer block:
+    - Efficient Self Attention + LayerNorm 
+    - Mix FeedForward + LayerNorm
+    - Residual connections
+
+![transformer_block](images/presentation/transformer_block.png)
+
+- Each stage in Encoder consists of one Overlap patch embedding followed by number of Transformer blocks
+
+![mix_encoder_stages](images/presentation/mix_encoder_stages.png)
+
 
 ### All MLP Decoder
 
-![](images/presentation/Segformer_decoder_arch.png)
-## HyperParameters
-## Results
-## Visualizing Attention Mask
+- **USP of Segformer compared to previous Transformer models is it combines output of 4 stages of encoder of different resolution using all MLP Decoder**
 
+![Segformer_decoder_arch](images/presentation/Segformer_decoder_arch.png)
+
+- Using Multi-resolution outputs of encoder with simple MLP Decoder helps the model tackle the Multi-scale objects and Global contextual learning.
+
+
+## HyperParameters
+Segformer MiT B3 model was trained with following settings:
+- Backbones initialized with imagenet weights and no layers were frozen during training. Decoder weights initialized with kaiming initialization policy
+- Plain Cross entropy loss function
+- Adam optimizer with OneCycle LR Scheduler with initial learning rate = 3e-4, cosine annealing with 30% ascend
+- Batch size of 8 
+- 12 epochs of training where model with lowest Dice loss was taken as best model
+
+## Results
+- The Segformer MiTB3 model achieves **meanIoU of 70.11%** in testset
+- [Notebook](finalContent/Segformer_mit_b3_cityscapes.ipynb) shows end to end training of the model and visualizing results
+[![Segformer MiT B3 Semantic Segmentation](images/Segformer_MiT_B3_Cityscapes_semantic_segmentation.gif)](https://youtu.be/NH4xPbxaXAY "Semantic Segmentation Cityscapes using Segformer MiT B3")
+
+
+## Visualizing Attention Mask
+- [Notebook](finalContent/Segformer_visualize_attention.ipynb) can be used to visualise attention masks of different stages of Model as follows:
 [![Segformer MiT B3 Attention Head Visualize](images/Segformer_MiT_B3_Cityscapes_Attention_Head_visualize.gif)](https://www.youtube.com/watch?v=BG8MoGAYMkA "Segformer-MiT-B3 Attention heads visualization on Cityscapes dataset")
