@@ -27,8 +27,9 @@ Repo contains content created for `SEGFORMERS COURSE` offered at [thinkautonomou
 - [Segformers](#segformers)
     - [Overlap Patch Embedding](#overlap-patch-embedding)
     - [Efficient self-attention](#efficient-self-attention)
+    - [Attention Intuition in images]()
     - [Mix FFN](#mix-ffn)
-    - [Transformer block](#transformer-block)
+    - [Encoder]()
     - [All MLP Decoder](#all-mlp-decoder)
 - [HyperParameters](#hyperparameters)
 - [Results](#results)
@@ -170,11 +171,44 @@ Gradients are nicer in CE compared to Dice loss
 - As seen above, there are 3 main parts in Transformer block of Encoder - Overlap Patch Embedding, Efficient self-attention and Mix-FFN. We'll cover these modules one by one.
 
 ### Overlap Patch Embedding
-![](images/presentation/overlap_patch_embeddings_output.png)
+- Entire image is split into patches which are passed to consequent Transformer blocks
+- This layer acts like Embedding layer and uses Convolution layers
+- Intuitively, the operations behind Overlap patch embedding is as follows :
+
+![overlap_patch_embeddings](images/presentation/overlap_patch_embeddings.png)
+
+- **The authors note that smaller patch sizes are preferrable to segmentation tasks (7 for 1st stage and 3 for later stages) and need for overlapping patches to inject some continuity**
+
+![Stage 1 Overlap Patch Embedding Channels](images/presentation/overlap_patch_embeddings_output.png)
+- Initial stage outputs indicate low-level features like edge detection and more abstract features in later stages
 
 
 ### Efficient self-attention
-![](images/presentation/Attention_mechanism.png)
+- In the original Transformer paper, authors proposed Query, Key and Values using same dimension. That is referred to as Scaled Dot Product Attention (scaled due to normalizatio applied)
+- *But Dot Product Attention operation is O(N<sup>2</sup>)), hence very costly for Images of higher resolution**
+- In Efficient Self-Attention, we use a <u>sequence reduction process</u> to reduce the spatial dimension of the key and value by factor R, hence complexity reduces to **O(N<sup>2</sup> / <sub>R</sub>)**
+
+![efficient_self_attention_block_diagram](images/presentation/efficient_self_attention_block_diagram.png)
+
+
+### Attention Intuition in images
+- In segmentation, we're trying to build classes together. So <u>attention will try to group similar classes together, car with car and tree with tree </u>. If depth estimation, pixels containing relevant features will have more weights.
+- Attention helps identify related context at location. If you’re looking for car, what is related parts in the entire images
+- `Query and key are two different spaces (key is more abstract feature map in efficient version), how to group low level features to get more meaningful vut abstract feature. Attention serves as bridge`
+
+![Attention_mechanism](images/presentation/Attention_mechanism.png)
+
+- Simplistically, we can consider  
+
+
+- [Notebook](finalContent/Efficient_self_attention_intuition.ipynb) explains Efficient Self Attention step by step for 
+
+
+Attention intuition - Andrej Karpathy Tesla AI video 2021 from 58:00 to 01:03 5 minutes
+Different types of attention
+
+
+
 
 
 ### Mix FFN
