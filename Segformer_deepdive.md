@@ -34,7 +34,6 @@ Repo contains content created for `SEGFORMERS COURSE` offered at [thinkautonomou
 - [HyperParameters](#hyperparameters)
 - [Results](#results)
 - [Visualizing Attention Mask](#visualizing-attention-mask)
-- [Things that didn't work](#things-that-didnt-work)
 
 
 ## Problem Statement
